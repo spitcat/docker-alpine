@@ -8,4 +8,6 @@ services:
         environment: 
             - NEW_GID=$GIANT_USER
             - NEW_UID=$GIANT_GROUP
-            
+        sysctls:
+        - net.ipv6.conf.all.disable_ipv6=1
+        - net.ipv6.conf.default.disable_ipv6=1            
